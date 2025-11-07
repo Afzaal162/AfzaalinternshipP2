@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jadoo — Travel Landing</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Travel landing page — hero animation demo"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Volkhov:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+     <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="logo">
+      <span>
+        <span class="brand-name">Jadoo</span>
+        <span class="brand-dot">.</span>
+      </span>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Nav Links + Auth buttons inside -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#bookings">Bookings</a></li>
+    <li><a href="#flights">Flights</a></li>
+    <li><a href="#services">Services</a></li>
+
+    <!-- Auth buttons moved inside the toggle -->
+    <div class="auth-mobile">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup">Sign Up</a>
+    </div>
+  </ul>
+</nav>
+
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="kicker">• BEST DESTINATIONS AROUND THE WORLD</div>
+
+          <!-- Hero heading: split into lines for precise control -->
+          <h1 class="hero-heading" aria-hidden="false">
+            <div class="line"><span class="word">Travel,</span></div>
+            <div class="line">
+              <span class="word"> <span class="highlight">enjoy</span> </span
+              ><span class="word">and</span>
+            </div>
+            <div class="line"><span class="word">live a new and</span></div>
+            <div class="line"><span class="word">full life</span></div>
+          </h1>
+
+          <p class="sub">
+            Built wicket longer admire do barton vanity itself do in it.
+            Preferred to sportsmen it engrossed listening.
+          </p>
+
+          <div class="stats">
+            <div class="stat-card">
+              <strong>500+</strong><span>Destinations</span>
+            </div>
+            <div class="stat-card">
+              <strong>2M+</strong><span>Travelers</span>
+            </div>
+            <div class="stat-card">
+              <strong>12K+</strong><span>Happy Clients</span>
+            </div>
+          </div>
+          <section class="cta-section">
+            <button class="btn-main">Find out more</button>
+            <button class="btn-play">
+              <span class="play-icon">▶</span>
+              Play Demo
+            </button>
+          </section>
+        </div>
+
+        <aside class="hero-right" aria-hidden="true">
+          <div class="image-wrap">
+            <!-- Replace src with your airplane image -->
+            <img
+              src="./Images/Plane-taking-off-twilight-1024x684.jpg"
+              alt="Airplane over sea"
+              class="hero-img"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- small badges -->
+          <div class="badge badge-left">
+            <span class="star">★</span>
+            <div><strong>4.9</strong><small>Top Rated</small></div>
+          </div>
+          <div class="badge badge-right">
+            <div class="people">👥</div>
+            <div><strong>12K+</strong><small>Happy Clients</small></div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <section class="services">
+      <h2 class="section-title">We Offer Best Services</h2>
+     <div class="card-container">
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-cloud-sun"></i></div>
+    <div class="card-content">
+      <h3>Weather</h3>
+      <p>Built Wicket longer admire do barton vanity itself.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-plane-departure"></i></div>
+    <div class="card-content">
+      <h3>Best Flights</h3>
+      <p>Engrossed listening. Park gate sell they west hard.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+    <div class="card-content">
+      <h3>Local Events</h3>
+      <p>Barton vanity itself do in it. Preferred to men.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="icon"><i class="fa-solid fa-sliders"></i></div>
+    <div class="card-content">
+      <h3>Customization</h3>
+      <p>We deliver outsourced aviation services for military.</p>
+    </div>
+  </div>
+</div>
+<section class="top-destinations">
+  <div class="container">
+    <p class="section-subtitle">Top Selling</p>
+    <h2 class="section-title">Top Destinations</h2>
+
+    <div class="cards">
+      <div class="card-2">
+        <img src="./Images/Rome.avif" alt="Rome, Italy">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Rome, Italy</h3>
+            <span>$5.42k</span>
+          </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 10 Days Trip</p>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <img src="./Images/London.jpg" alt="London, UK">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>London, UK</h3>
+            <span>$4.2k</span>
+          </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 12 Days Trip</p>
+        </div>
+      </div>
+
+      <div class="card-2">
+        <img src="./Images/Helsinki, Finland.jpeg" alt="Helsinki, Finland">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Helsinki, Finland</h3>
+            <span>$15k</span>
+          </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 28 Days Trip</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="booking-section">
+  <div class="booking-container">
+    <!-- LEFT SIDE -->
+    <div class="booking-text animate-left">
+      <h4 class="small-title">EASY AND FAST</h4>
+      <h2 class="main-title">Book Your Next Trip <br> In 3 Easy Steps</h2>
+
+      <div class="step">
+        <div class="icon yellow"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="step-text">
+          <h3>Choose Destination</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="icon red"><i class="fas fa-credit-card"></i></div>
+        <div class="step-text">
+          <h3>Make Payment</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="icon blue"><i class="fas fa-car-side"></i></div>
+        <div class="step-text">
+          <h3>Reach Airport on Selected Date</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="booking-card animate-right">
+      <img src="./Images/Geerce.webp" alt="Trip to Greece" class="card-img" />
+      <div class="card-content">
+        <h3>Trip To Greece</h3>
+        <p>14–29 June | by Robbin Joseph</p>
+        <div class="people">
+          <i class="fas fa-user-friends"></i>
+          <span>24 people going</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials">
+  <div class="testimonials-content">
+    <h4>TESTIMONIALS</h4>
+    <h2>What People Say<br>About Us.</h2>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="./Images/Testimonials.jpeg" alt="User" class="profile-img" />
+    <p class="testimonial-text">
+      "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no."
+    </p>
+    <h3>Mike Taylor</h3>
+    <p class="location">Lahore, Pakistan</p>
+  </div>
+</section>
+<!-- airline -->
+ <section class="airlines">
+  <div class="airline">
+    <div class="icon" style="background: #e63946;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Emirates</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #6a0572;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Qatar Airways</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #007f5f;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>PIA</p>
+  </div>
+
+  <div class="airline">
+    <div class="icon" style="background: #003049;">
+      <i class="fas fa-plane"></i>
+    </div>
+    <p>Singapore Airlines</p>
+  </div>
+</section>
+<!-- newsletter section -->
+ <section class="newsletter-section">
+        <div class="monitor-icon">
+            <svg viewBox="0 0 24 24" fill="#5a5a7d" opacity="0.3">
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        
+        <div class="newsletter-content">
+            <h2>Subscribe to get information, latest<br>news and other interesting offers<br>about Jadoo</h2>
+            
+            <form class="subscription-form" onsubmit="return false;">
+                <div class="email-input-wrapper">
+                    <span class="email-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M22 7L12 13 2 7"/>
+                        </svg>
+                    </span>
+                    <input type="email" class="email-input" placeholder="Your email" required>
+                </div>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="paper-plane">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 20L21 12 3 4 3 11 15 12 3 13z"/>
+            </svg>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">
+            <div class="brand-logo">
+                <span class="plane-icon">✈</span>
+                Jadoo
+            </div>
+            <p class="brand-tagline">Book your trip in minute, get full Control for much longer.</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Mobile</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+                <li><a href="#">Help/FAQ</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Affiliates</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>More</h3>
+            <ul>
+                <li><a href="#">Airlinefees</a></li>
+                <li><a href="#">Airline</a></li>
+                <li><a href="#">Low fare tips</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column social-section">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="app-download">
+                <p>Discover our app</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </div>
+     <div class="footer-bottom">
+    <p>All rights reserved © 2025 <span>Jadoo</span></p>
+  </div>
+
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
