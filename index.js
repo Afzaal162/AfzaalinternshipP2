@@ -1,18 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
+ document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
-  menuToggle?.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    menuToggle.classList.toggle("active");
+  if (!menuToggle || !menu) return;
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('show');    // show/hide menu
+    menuToggle.classList.toggle('active');           // animate hamburger -> X
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
-  // Optional: close menu when clicking a link
-  navLinks?.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-      menuToggle.classList.remove("active");
+  // Close the menu when a link is clicked (mobile UX)
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
     });
+  });
+
+  // Optional: close menu when clicking outside it (mobile)
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      const clickedInside = e.target.closest('.nav-inner');
+      if (!clickedInside && menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
   });
 });
 
