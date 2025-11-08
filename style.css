@@ -1013,7 +1013,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* Hover effect on airline icons */
 .airline:hover .icon {
   transform: scale(1.1);
 }
@@ -1024,7 +1023,29 @@ body {
   margin-top: 5px;
 }
 
-/* Animations for airlines */
+/* Animations */
+@keyframes slideLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeUp {
   from {
     transform: translateY(50px);
@@ -1033,34 +1054,6 @@ body {
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .airlines {
-    gap: 50px;
-    padding: 50px 8%;
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .airlines {
-    flex-direction: column;
-    gap: 30px;
-    padding: 40px 5%;
-  }
-
-  .airline .icon-1 {
-    width: 60px;
-    height: 60px;
-    font-size: 20px;
-  }
-
-  .airline p {
-    font-size: 14px;
   }
 }
 
@@ -1322,4 +1315,5 @@ footer {
     right: 30px;
   }
 }
+
 
