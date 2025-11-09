@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Jadoo — Travel Landing</title>
-<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css" />
     <meta
       name="description"
       content="Travel landing page — hero animation demo"
@@ -19,41 +19,36 @@
     />
   </head>
   <body>
-<header class="nav">
-  <div class="nav-inner">
-    <div class="brand">
-      <div class="brand-text">
-        <div class="brand-name">Jadoo</div>
-      </div>
-    </div>
+ <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-name">Jadoo</div>
+            </div>
 
-    <!-- Desktop nav links (kept inside nav for semantic reasons) -->
-    <nav class="menu" id="menu" aria-label="Main menu">
-      <a href="#destinations">Destinations</a>
-      <a href="#hotels">Hotels</a>
-      <a href="#flights">Flights</a>
-      <a href="#bookings">Bookings</a>
+            <nav class="menu" id="menu">
+                <a href="#destinations">Destinations</a>
+                <a href="#hotels">Hotels</a>
+                <a href="#flights">Flights</a>
+                <a href="#bookings">Bookings</a>
 
-      <!-- Auth buttons for mobile (kept inside .menu so they show only when menu is visible on small screens) -->
-      <div class="auth-mobile">
-        <a class="login" href="#">Login</a>
-        <a class="signup" href="#">Sign up</a>
-      </div>
-    </nav>
+                <div class="auth-mobile">
+                    <a class="login" href="#">Login</a>
+                    <a class="signup" href="#">Sign up</a>
+                </div>
+            </nav>
 
-    <!-- Hamburger toggle (visible on mobile) -->
-    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </div>
-</header>
+            <div class="auth-desktop">
+                <a class="login" href="#">Login</a>
+                <a class="signup" href="#">Sign up</a>
+            </div>
 
-
-
-
-
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
@@ -155,6 +150,16 @@
           </div>
           <p><i class="fa-solid fa-paper-plane"></i> 10 Days Trip</p>
         </div>
+      </div> 
+       <div class="card-2">
+        <img src="./Images/Munich.jpg" alt="Rome, Italy">
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Munich, Germany</h3>
+            <span>$7.12k</span>
+          </div>
+          <p><i class="fa-solid fa-paper-plane"></i> 15 Days Trip</p>
+        </div>
       </div>
 
       <div class="card-2">
@@ -165,17 +170,6 @@
             <span>$4.2k</span>
           </div>
           <p><i class="fa-solid fa-paper-plane"></i> 12 Days Trip</p>
-        </div>
-      </div>
-
-      <div class="card-2">
-        <img src="./Images/Helsinki, Finland.jpeg" alt="Helsinki, Finland">
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Helsinki, Finland</h3>
-            <span>$15k</span>
-          </div>
-          <p><i class="fa-solid fa-paper-plane"></i> 28 Days Trip</p>
         </div>
       </div>
     </div>
@@ -248,7 +242,6 @@
   </div>
 </section>
 <!-- airline -->
-<!-- airline -->
 <section class="airlines">
   <div class="airline">
     <div class="icon-1" >
@@ -278,6 +271,7 @@
     <p>Singapore Airlines</p>
   </div>
 </section>
+
 <!-- newsletter section -->
  <section class="newsletter-section">
         <div class="monitor-icon">
@@ -385,6 +379,3 @@
     <script src="index.js"></script>
   </body>
 </html>
-
-
-
