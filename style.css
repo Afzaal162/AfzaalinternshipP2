@@ -24,166 +24,227 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-:root{
+:root {
   --accent: #ff7a59;
   --text: #0b1940;
   --nav-bg: #ffffff;
 }
 
 /* Base navbar */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background: var(--nav-bg);
-  box-shadow: 0 6px 18px rgba(12,20,40,0.06);
+:root {
+  --nav-bg: #ffffff;
+  --text: #212832;
+  --accent: #df6951;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
+  background: #f9f9f9;
 }
 
-.nav-inner{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  justify-content: space-between;
-}
+/* Base navbar */
+  .nav {
+            width: 100%;
+            background: var(--nav-bg);
+            box-shadow: 0 6px 18px rgba(12, 20, 40, 0.06);
+            position: relative;
+            z-index: 999;
+        }
 
-/* brand */
-.brand { display:flex; align-items:center; gap:10px; }
-.logo { width:36px; height:36px; }
-.brand-name { color:black; font-weight:700; font-size:20px; }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-/* menu links (desktop default) */
-.menu {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
+        /* Brand */
+        .brand-name {
+            color: black;
+            font-weight: 700;
+            font-size: 20px;
+        }
 
-/* Links style */
-.menu a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  padding: 6px 4px;
-  transition: color 200ms ease;
-}
-.menu a:hover { color: var(--accent); }
+        /* Desktop menu */
+        .menu {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
 
-/* auth (desktop) */
-.auth.desktop-auth { display: flex; gap: 12px; align-items:center; }
-.auth.desktop-auth .login { color:var(--text); text-decoration:none; font-weight:600; }
-.auth.desktop-auth .signup {
-  background:var(--accent);
-  color:#fff;
-  padding:8px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-}
+        .menu a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            padding: 6px 4px;
+            transition: color 200ms ease;
+        }
 
-/* hamburger toggle - hidden on desktop */
-.menu-toggle {
-  display: none; /* shown under breakpoint */
-  width: 36px;
-  height: 30px;
-  padding: 4px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
+        .menu a:hover {
+            color: var(--accent);
+        }
 
-/* hamburger bars */
-.menu-toggle span {
-  display:block;
-  height:3px;
-  width:100%;
-  background:var(--text);
-  border-radius:3px;
-  margin:4px 0;
-  transition: transform 250ms ease, opacity 250ms ease;
-}
-.auth-mobile .signup {
-    background: var(--accent);
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    text-align:center;
-    text-decoration: none;
-    font-weight:700;
-  }
+        /* Desktop auth */
+        .auth-desktop {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
 
-/* Mobile behavior */
-@media (max-width: 900px) {
-  /* hide desktop auth buttons */
-  .auth.desktop-auth { display: none; }
+        .auth-desktop .login {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 14px;
+        }
 
-  /* show toggle */
-  .menu-toggle { display: inline-flex; align-items:center; justify-content:center; }
+        .auth-desktop .signup {
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+        }
 
-  /* hide menu by default on mobile; it will show when .show is added */
-  .menu {
-    position: absolute;
-    top: 64px; /* adjust to navbar height */
-    right: 4%;
-    width: calc(100% - 8%); /* leave small margins on both sides */
-    max-width: 420px;
-    background: var(--nav-bg);
-    flex-direction: column;
-    gap: 12px;
-    padding: 18px;
-    border-radius: 14px;
-    box-shadow: 0 12px 30px rgba(12,20,40,0.12);
-    display: none; /* hidden until toggled */
-  }
+        /* Hide mobile elements on desktop */
+        .auth-mobile {
+            display: none;
+        }
 
-  .menu.show {
-    display: flex;
-    animation: slideDown 260ms cubic-bezier(.2,.9,.2,1);
-  }
+        .menu-toggle {
+            display: none;
+        }
 
-  /* mobile auth inside menu */
-  .auth-mobile { display:flex; flex-direction: column; gap:10px; margin-top:8px; }
+        /* MOBILE STYLES */
+        @media (max-width: 900px) {
+            /* Show hamburger, hide desktop auth */
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 5px;
+                z-index: 1001;
+            }
 
-  .auth-mobile .signup {
-    background: var(--accent);
-    color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    text-align:center;
-    text-decoration: none;
-    font-weight:700;
-  }
+            .menu-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background: var(--text);
+                margin: 5px 0;
+                transition: all 0.3s ease;
+                border-radius: 2px;
+            }
 
-  .auth-mobile .login {
-    color: var(--text);
-    text-decoration:none;
-    text-align:center;
-    padding:8px;
-    font-weight:600;
-  }
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
 
-  @keyframes slideDown {
-    from { opacity:0; transform: translateY(-8px); }
-    to   { opacity:1; transform: translateY(0); }
-  }
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
 
-  /* animate toggle to X when .active is present */
-  .menu-toggle.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-}
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
 
+            .auth-desktop {
+                display: none;
+            }
+
+            /* Mobile menu - OVERLAY style */
+            .menu {
+                position: fixed;
+                top: 66px;
+                left: 0;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 20px;
+                gap: 0;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transition: height 0.3s ease;
+            }
+
+            .menu.show {
+                height: auto;
+                max-height: calc(100vh - 66px);
+                overflow-y: auto;
+                padding: 20px;
+            }
+
+            .menu a {
+                width: 100%;
+                padding: 15px 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .menu a:last-of-type {
+                border-bottom: none;
+            }
+
+            /* Mobile auth buttons */
+            .auth-mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 2px solid #f0f0f0;
+            }
+
+            .auth-mobile .login {
+                color: var(--text);
+                text-decoration: none;
+                text-align: center;
+                padding: 12px;
+                font-weight: 600;
+                border: 2px solid var(--accent);
+                border-radius: 10px;
+            }
+
+            .auth-mobile .signup {
+                background: var(--accent);
+                color: #fff;
+                padding: 12px;
+                border-radius: 10px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+
+        /* Demo content */
+        .demo-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .demo-content h1 {
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .demo-content p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
 
 /* Hero Section */
 .hero {
@@ -712,15 +773,6 @@ body {
   color: #fff;
   font-size: 1.3rem;
 }
-.icon.yellow {
-  background: #f1a501;
-}
-.icon.red {
-  background: #df6951;
-}
-.icon.blue {
-  background: #006380;
-}
 
 .step-text h3 {
   font-size: 1.2rem;
@@ -1056,7 +1108,6 @@ body {
     opacity: 1;
   }
 }
-
 .newsletter-section {
   max-width: 900px;
   margin: 0 auto 60px;
@@ -1315,5 +1366,58 @@ footer {
     right: 30px;
   }
 }
+/* 🌐 Fix mobile overflow and centering */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* prevent sideways scroll */
+  }
 
+  .nav {
+    display: flex;
+    justify-content: space-between; /* places toggle on left, logo on right */
+    align-items: center;
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
 
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .toggle {
+    order: 2; /* make sure toggle comes first (right) */
+  }
+
+  .brand {
+    order: 1; /* logo comes after (left) */
+  }
+
+  /* Optional: add small gap between them */
+  .brand img {
+    max-width: 120px;
+  }
+}
+
+/* Ensure hero & sections stay within viewport */
+section,
+header,
+footer,
+main {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Prevent hero images or planes from pushing layout */
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
