@@ -1,41 +1,19 @@
- document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-  if (!menuToggle || !menu) return;
-
-  menuToggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('show');    // show/hide menu
-    menuToggle.classList.toggle('active');           // animate hamburger -> X
-    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  // Close the menu when a link is clicked (mobile UX)
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (menu.classList.contains('show')) {
-        menu.classList.remove('show');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
-
-  // Optional: close menu when clicking outside it (mobile)
-  document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 900) {
-      const clickedInside = e.target.closest('.nav-inner');
-      if (!clickedInside && menu.classList.contains('show')) {
-        menu.classList.remove('show');
-        menuToggle.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      }
-    }
-  });
+menuToggle.addEventListener('click', function () {
+    menu.classList.toggle('show');
+    menuToggle.classList.toggle('active');
 });
 
-
-// Animate hero text and highlight underline
+// Close menu when clicking on a link
+const menuLinks = menu.querySelectorAll('a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        menu.classList.remove('show');
+        menuToggle.classList.remove('active');
+    });
+});
 document.addEventListener('DOMContentLoaded', () => {
     // Collect the .line elements inside the hero heading
     const lines = Array.from(document.querySelectorAll('.hero-heading .line'));
